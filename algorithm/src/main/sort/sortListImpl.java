@@ -1,7 +1,5 @@
 package sort;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,11 +30,11 @@ public class sortListImpl {
             while (low < high && list.get(high) >= key) {
                 --high;
             }
-            swap(list,low,high);
-            while (low < high && list.get(low) <= key){
+            swap(list, low, high);
+            while (low < high && list.get(low) <= key) {
                 ++low;
             }
-            swap(list,low,high);
+            swap(list, low, high);
         }
         System.out.println(list);
         return low;
@@ -44,11 +42,12 @@ public class sortListImpl {
 
     /**
      * 将列表中两个位置的对象互换
+     *
      * @param list
      * @param low
      * @param high
      */
-    private static void swap(List<Integer> list, int low, int high){
+    private static void swap(List<Integer> list, int low, int high) {
         Integer num1 = list.get(high);
         Integer num2 = list.get(low);
         list.set(low, num1);
@@ -56,7 +55,7 @@ public class sortListImpl {
     }
 
     public static void main(String[] args) {
-        List<Integer> list = new LinkedList<Integer>(){
+        List<Integer> list = new LinkedList<Integer>() {
             {
                 add(52);
                 add(34);
@@ -67,7 +66,7 @@ public class sortListImpl {
                 add(7);
             }
         };
-        quickSort(list, 0, list.size()-1);
+        quickSort(list, 0, list.size() - 1);
 
         System.out.println(list);
     }
