@@ -1,7 +1,10 @@
 package insertTest;
 
 import java.util.Set;
+import java.util.HashSet;
 import java.util.TreeSet;
+import java.util.LinkedHashSet;
+
 
 /**
  * @author XieLongZhen
@@ -11,7 +14,7 @@ public class SetInsertTest {
 
     static void hashSetTest() {
         long startTime = System.currentTimeMillis();
-        Set<Integer> set = new java.util.HashSet<>();
+        Set<Integer> set = new HashSet<>();
         initialSet(set);
         long endTime = System.currentTimeMillis();
         System.out.println("HashSet添加10万个元素程序运行时间为：" + (endTime - startTime) + "ms");
@@ -27,7 +30,7 @@ public class SetInsertTest {
 
     static void linkedHashSetTest() {
         long startTime = System.currentTimeMillis();
-        Set<Integer> set = new java.util.LinkedHashSet<>();
+        Set<Integer> set = new LinkedHashSet<>();
         initialSet(set);
         long endTime = System.currentTimeMillis();
         System.out.println("LinkedHashSet添加10万个整数运行时间为：" + (endTime - startTime) + "ms");
