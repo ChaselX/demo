@@ -36,7 +36,6 @@ public class sortListImpl {
             }
             swap(list, low, high);
         }
-        System.out.println(list);
         return low;
     }
 
@@ -67,7 +66,6 @@ public class sortListImpl {
             }
         };
         quickSort(list, 0, list.size() - 1);
-
         System.out.println(list);
     }
 }
